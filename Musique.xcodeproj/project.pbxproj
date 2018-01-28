@@ -139,7 +139,6 @@
 			children = (
 				23E3E185201CBF3400D1CB86 /* BridgeViewController.h */,
 				23E3E186201CBF3400D1CB86 /* BridgeViewController.m */,
-				23E3E184201CBF3400D1CB86 /* Musique-Bridging-Header.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -176,6 +175,7 @@
 		23E3E14E201CB51C00D1CB86 /* Musique */ = {
 			isa = PBXGroup;
 			children = (
+				23E3E184201CBF3400D1CB86 /* Musique-Bridging-Header.h */,
 				15A58F49201D91E2000F609F /* ServerResponses */,
 				15A58F48201D91CE000F609F /* Other */,
 				15A58F47201D91B8000F609F /* Storyboards */,
