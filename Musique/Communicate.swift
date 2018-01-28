@@ -40,10 +40,10 @@ class Communicate {
         }
     }
     
-    static func createGroup(group: String,  f: @escaping ((Bool) -> ())) {
+    static func createGroup(group: String,  f: @escaping ((String) -> ())) {
         Alamofire.request(SERVER + "/create", method: .post, /*parameters: tv,*/ encoding: JSONEncoding.default).responseObject { (response: DataResponse<CheckResponse>) in
             print("bonjour")
-            let k = response.result.value?.response
+            let k = response.result.value?.name
             if let k2 = k {
                 f(k2)
             }

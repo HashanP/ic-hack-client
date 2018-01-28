@@ -195,18 +195,30 @@
         <!--Group Created-->
         <scene sceneID="6W1-G2-Cfb">
             <objects>
-                <viewController id="pZF-UG-0L6" sceneMemberID="viewController">
+                <viewController id="pZF-UG-0L6" customClass="CreateViewController" customModule="Musique" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RTz-sC-0Bw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-ee-1VT">
+                                <rect key="frame" x="16" y="81" width="343" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="JhB-qU-o0y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Group Created" id="qzX-n3-fqh"/>
+                    <connections>
+                        <outlet property="label" destination="SGR-ee-1VT" id="8Um-6o-0HN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abm-mt-KBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3556" y="-170"/>
+            <point key="canvasLocation" x="3556" y="-170.46476761619192"/>
         </scene>
         <!--Item-->
         <scene sceneID="6e6-oX-f2I">

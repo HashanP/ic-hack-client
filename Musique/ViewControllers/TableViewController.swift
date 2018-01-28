@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var message = ""
     var dummyList = ["Group 1", "Group 2", "Group 3"]
     
     @IBAction func btnPressed(_ sender: Any) {
@@ -18,9 +19,19 @@ class TableViewController: UITableViewController {
             self.performSegue(withIdentifier: "mySegue4", sender: self)
         }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Create new group", comment: "Default action"), style: .`default`, handler: { _ in
-            self.performSegue(withIdentifier: "mySegue5", sender: self)
+                func f(v: String) {
+                    self.message = v
+                    print(v)
+                    self.performSegue(withIdentifier: "mySegue5", sender: self)
+                }
+            Communicate.createGroup(group: Important.getUsername(), f: f)
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? CreateViewController
+        vc?.t = self.message
     }
     
     override func viewDidLoad() {

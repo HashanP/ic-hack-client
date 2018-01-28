@@ -10,6 +10,7 @@
 		15A58F4B201D9202000F609F /* Important.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A58F4A201D9202000F609F /* Important.swift */; };
 		15A58F4D201D9B57000F609F /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A58F4C201D9B57000F609F /* Playlist.swift */; };
 		15A58F50201D9E3E000F609F /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A58F4F201D9E3E000F609F /* Track.swift */; };
+		15DF5243201DD6A300FE6A13 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF5242201DD6A300FE6A13 /* CreateViewController.swift */; };
 		230B2E15201D406D005E52AF /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E3E23F201CC64100D1CB86 /* SpotifyAudioPlayback.framework */; };
 		230B2E16201D406D005E52AF /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E3E240201CC64200D1CB86 /* SpotifyAuthentication.framework */; };
 		230B2E17201D406D005E52AF /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E3E23E201CC64000D1CB86 /* SpotifyMetadata.framework */; };
@@ -55,6 +56,7 @@
 		15A58F4A201D9202000F609F /* Important.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Important.swift; sourceTree = "<group>"; };
 		15A58F4C201D9B57000F609F /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		15A58F4F201D9E3E000F609F /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		15DF5242201DD6A300FE6A13 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		230B31BE201D40E9005E52AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		230B31C0201D4195005E52AF /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		230B31C3201D61F1005E52AF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				23E3E297201D169700D1CB86 /* Communicate.swift */,
 				15A58F4A201D9202000F609F /* Important.swift */,
 				15A58F4F201D9E3E000F609F /* Track.swift */,
+				15DF5242201DD6A300FE6A13 /* CreateViewController.swift */,
 			);
 			path = Musique;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			files = (
 				230B31C8201D86CE005E52AF /* ViewController.swift in Sources */,
 				23E3E187201CBF3400D1CB86 /* BridgeViewController.m in Sources */,
+				15DF5243201DD6A300FE6A13 /* CreateViewController.swift in Sources */,
 				23E3E298201D169700D1CB86 /* Communicate.swift in Sources */,
 				23E3E29A201D2BBC00D1CB86 /* CheckResponse.swift in Sources */,
 				23E3E28A201CEDB100D1CB86 /* JoinViewController.swift in Sources */,

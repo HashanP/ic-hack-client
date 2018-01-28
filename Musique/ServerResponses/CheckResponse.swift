@@ -10,6 +10,7 @@ import ObjectMapper
 
 class CheckResponse: Mappable {
     var response: Bool?
+    var name: String?
     
     required init?(map: Map) {
         
@@ -17,5 +18,6 @@ class CheckResponse: Mappable {
     
     func mapping(map: Map) {
         response <- map["response"]
+        name <- map["name"]
     }
 }
