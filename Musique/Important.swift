@@ -42,22 +42,21 @@ class Important {
         }
     }
     
-    static func fix<A: Hashable, B>(f: @escaping ((A, (([B]) -> ())) -> ())) -> (([A], @escaping (([A:[B]]) -> ())) -> ()) {
-        func f2(all: [A], f3: @escaping (([A:[B]]) -> ())) {
-            var d: [A:[B]] = [:]
+    static func fix(all: [Playlist], f3: @escaping (([Playlist:[Track]]) -> ())) {
+            var d: [Playlist:[Track]] = [:]
             var current = 0
             for a in all {
-                func t(z: [B]) {
+                func t(z: [Track]) {
+                    print("day3")
                     d[a] = z
+                    current += 1
                     if current == all.count {
                         f3(d)
                     }
                 }
-                f(a, t)
+                getPlaylist2(k:a, f:t)
             }
         }
-        return f2
-    }
     
     static func getPlaylist2(k: Playlist, f: @escaping (([Track]) -> ())) {
         getPlaylist(k: k.url, f: f)

@@ -50,8 +50,12 @@ class Communicate {
         }
     }
     
-    static func joinGroup(group: String,  f: @escaping ((Bool) -> ())) {
-        Alamofire.request(SERVER + "/join", method: .post, /*parameters: tv,*/ encoding: JSONEncoding.default).responseObject { (response: DataResponse<CheckResponse>) in
+    static func joinGroup(username: String, group: String,  f: @escaping ((Bool) -> ())) {
+        let tv: Parameters = [
+            username: username,
+            group: group
+        ]
+        Alamofire.request(SERVER + "/join", method: .post, parameters: tv, encoding: JSONEncoding.default).responseObject { (response: DataResponse<CheckResponse>) in
             print("bonjour")
             let k = response.result.value?.response
             if let k2 = k {

@@ -26,10 +26,14 @@ class Playlist: Equatable, Hashable {
     }
     
     func toParameters(tracks: [Track]) -> Parameters {
+        var k: [Parameters] = []
+        for t in tracks {
+            k.append(t.toParameters())
+        }
         return [
             "name": name,
-            "url": url,
-            "tracks": tracks
+            "url": url.absoluteString,
+            "tracks": k
         ]
     }
     

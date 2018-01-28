@@ -23,7 +23,7 @@ class Track {
     func toParameters() -> Parameters {
         return [
             "name": name,
-            "url": url,
+            "url": url.absoluteString,
             "identifier": identifier
         ]
     }

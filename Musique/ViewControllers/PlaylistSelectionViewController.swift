@@ -77,7 +77,7 @@ class PlaylistSelectionViewController: UITableViewController {
         var checkedPlaylists : [Playlist] = []
     
                 let cells = self.tableView.visibleCells as! Array<UITableViewCell>
-             
+        
              for i in 0..<(playlistsList.count) {
              // look at data
              if (cells[i].accessoryType == UITableViewCellAccessoryType.checkmark){
@@ -85,9 +85,9 @@ class PlaylistSelectionViewController: UITableViewController {
              }
              }
         
-            
+        
             /* let cells = self.tableView.visibleCells as! Array<UITableViewCell>
-            
+         
             for cell in cells {
                 // look at data
                 if cell.accessoryType == UITableViewCellAccessoryType.checkmark {
@@ -98,7 +98,17 @@ class PlaylistSelectionViewController: UITableViewController {
             for p in checkedPlaylists {
                 print(p.name)
             }
-    
+        
+        func g(z: [Playlist:[Track]]) {
+            print("day")
+            func g2(z2: Bool) {
+                print("day2")
+                print(g2)
+            }
+            Communicate.upload(username: Important.getUsername(), playlists: Communicate.convert(d: z), f: g2)
+        }
+        
+        Important.fix(all:checkedPlaylists, f3:g)
         
     }
     
