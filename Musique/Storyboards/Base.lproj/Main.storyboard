@@ -35,7 +35,7 @@
                     </view>
                     <connections>
                         <segue destination="7DX-EV-LtZ" kind="presentation" identifier="mySegue" id="t4j-Hw-EpF"/>
-                        <segue destination="zlF-Vx-teg" kind="presentation" identifier="mySegue2" id="YYq-AW-h0J"/>
+                        <segue destination="7Tw-gL-dnr" kind="presentation" identifier="mySegue2" id="KZR-8A-ONu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="2609" y="438"/>
         </scene>
-        <!--Playlist Selection View Controller-->
+        <!--Select Playlists to Share-->
         <scene sceneID="6b8-Wl-iB4">
             <objects>
                 <tableViewController id="zlF-Vx-teg" customClass="PlaylistSelectionViewController" customModule="Musique" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,10 +103,33 @@
                             <outlet property="delegate" destination="zlF-Vx-teg" id="eee-Py-YRT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Select Playlists to Share" id="6eB-VK-87j">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Bwj-ng-V2n">
+                            <connections>
+                                <action selector="Done:" destination="zlF-Vx-teg" id="b1M-gX-W3Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPC-zP-VUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="1139"/>
+            <point key="canvasLocation" x="1774" y="1162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3iw-n9-Lny">
+            <objects>
+                <navigationController id="7Tw-gL-dnr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EgZ-tk-NCJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zlF-Vx-teg" kind="relationship" relationship="rootViewController" id="hV3-fH-NXV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSw-g0-7EO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="763"/>
         </scene>
         <!--Item-->
         <scene sceneID="sfb-IO-3wE">

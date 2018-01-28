@@ -61,6 +61,7 @@ class PlaylistSelectionViewController: UITableViewController {
         return cell
     }
     
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark) {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
@@ -68,6 +69,39 @@ class PlaylistSelectionViewController: UITableViewController {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
         }
     }
+   
+    @IBAction func Done(_ sender: UIBarButtonItem) {
+    
+        print("here")
+    
+        var checkedPlaylists : [Playlist] = []
+    
+                let cells = self.tableView.visibleCells as! Array<UITableViewCell>
+             
+             for i in 0..<(playlistsList.count) {
+             // look at data
+             if (cells[i].accessoryType == UITableViewCellAccessoryType.checkmark){
+             checkedPlaylists.append(playlistsList[i])
+             }
+             }
+        
+            
+            /* let cells = self.tableView.visibleCells as! Array<UITableViewCell>
+            
+            for cell in cells {
+                // look at data
+                if cell.accessoryType == UITableViewCellAccessoryType.checkmark {
+                    checkedPlaylists.append(playlistsList[cell.accessibilityElementCount()])
+                }
+            }*/
+        
+            for p in checkedPlaylists {
+                print(p.name)
+            }
+    
+        
+    }
+    
 
 
     /*
