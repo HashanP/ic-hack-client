@@ -55,7 +55,7 @@ class ViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAu
             performSegue(withIdentifier: "mySegue", sender: self)
             func t(z: [Playlist]) {
                 for v in z {
-                    func w(z2: [String]) {
+                    func w(z2: [Track]) {
                         
                     }
                     Important.getPlaylist(k: v.url, f: w)
