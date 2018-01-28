@@ -7,13 +7,38 @@
 //
 
 import Foundation
+import Alamofire
 
-class Playlist {
+class Playlist: Equatable, Hashable {
     var name: String
     var url: URL
     
     init(name: String, url: URL) {
         self.name = name
         self.url = url
+    }
+    
+    func toParameters() -> Parameters {
+        return [
+            "name": name,
+            "url": url
+        ]
+    }
+    
+    func toParameters(tracks: [Track]) -> Parameters {
+        return [
+            "name": name,
+            "url": url,
+            "tracks": tracks
+        ]
+    }
+    
+    static func == (lhs: Playlist, rhs: Playlist) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.url == rhs.url
+    }
+
+    var hashValue: Int {
+        return name.hashValue ^ url.hashValue
     }
 }

@@ -42,7 +42,29 @@ class Important {
         }
     }
     
-    static func getPlaylist(k: URL, f: (([String]) -> ())) {
+    static func fix<A: Hashable, B>(f: @escaping ((A, (([B]) -> ())) -> ())) -> (([A], @escaping (([A:[B]]) -> ())) -> ()) {
+        func f2(all: [A], f3: @escaping (([A:[B]]) -> ())) {
+            var d: [A:[B]] = [:]
+            var current = 0
+            for a in all {
+                func t(z: [B]) {
+                    d[a] = z
+                    if current == all.count {
+                        f3(d)
+                    }
+                }
+                f(a, t)
+            }
+        }
+        return f2
+    }
+    
+    static func getPlaylist2(k: Playlist, f: @escaping (([Track]) -> ())) {
+        getPlaylist(k: k.url, f: f)
+    }
+   
+    
+    static func getPlaylist(k: URL, f: @escaping (([Track]) -> ())) {
         let userDefaults = UserDefaults.standard
         if let sessionObj:AnyObject = userDefaults.object(forKey: "SpotifySession") as AnyObject? {
             let sessionDataObj = sessionObj as! Data
@@ -53,14 +75,16 @@ class Important {
                 let k = try SPTPlaylistSnapshot.createRequestForPlaylist(withURI: k, accessToken: session.accessToken)
                 let handler = SPTRequest.sharedHandler()
                 func f2(error: Optional<Error>, resp: Optional<URLResponse>, data: Optional<Data>) {
-                    var v: [String] = []
+                    var v: [Track] = []
                     do {
                         let t = try SPTPlaylistSnapshot.init(from: data, with: resp)
                         let t3 = t.firstTrackPage
-                       
+                        
                         for i in t3!.items {
-                            print(i)
+                            let i5 = i as! SPTPlaylistTrack
+                            v.append(Track(name: i5.name, url: i5.uri, identifier: i5.identifier))
                         }
+                        f(v)
                     } catch {
                         
                     }
