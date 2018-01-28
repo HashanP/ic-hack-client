@@ -110,6 +110,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7DX-EV-LtZ" kind="presentation" identifier="mySegue3" id="LIi-h7-4zk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPC-zP-VUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acm-5v-ZUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4142" y="-954"/>
+            <point key="canvasLocation" x="3556" y="-831"/>
         </scene>
         <!--Group Created-->
         <scene sceneID="6W1-G2-Cfb">
@@ -192,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abm-mt-KBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4142" y="-221"/>
+            <point key="canvasLocation" x="3556" y="-170"/>
         </scene>
         <!--Item-->
         <scene sceneID="6e6-oX-f2I">
@@ -244,8 +247,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="n1s-ee-RTf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dKS-xT-K5M"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dKS-xT-K5M">
+                            <connections>
+                                <action selector="btnPressed:" destination="ZRt-XK-xEH" id="4d8-Vv-vpc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="pzc-jg-iep" kind="show" identifier="mySegue4" id="uRm-D7-0yG"/>
+                        <segue destination="pZF-UG-0L6" kind="show" identifier="mySegue5" id="n2e-u1-X4z"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Gs-eb-IaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,4 +281,7 @@
             <point key="canvasLocation" x="772" y="34"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LIi-h7-4zk"/>
+    </inferredMetricsTieBreakers>
 </document>

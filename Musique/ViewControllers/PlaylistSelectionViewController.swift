@@ -104,6 +104,7 @@ class PlaylistSelectionViewController: UITableViewController {
             func g2(z2: Bool) {
                 print("day2")
                 print(g2)
+                performSegue(withIdentifier: "mySegue3", sender: self)
             }
             Communicate.upload(username: Important.getUsername(), playlists: Communicate.convert(d: z), f: g2)
         }

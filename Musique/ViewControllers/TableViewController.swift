@@ -12,6 +12,17 @@ class TableViewController: UITableViewController {
 
     var dummyList = ["Group 1", "Group 2", "Group 3"]
     
+    @IBAction func btnPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Which do you want to do?", message: "You can either join a pre-exisitng group or create your own?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Join group", comment: "Default action"), style: .`default`, handler: { _ in
+            self.performSegue(withIdentifier: "mySegue4", sender: self)
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Create new group", comment: "Default action"), style: .`default`, handler: { _ in
+            self.performSegue(withIdentifier: "mySegue5", sender: self)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
@@ -20,7 +31,7 @@ class TableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
