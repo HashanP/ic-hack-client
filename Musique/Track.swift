@@ -13,18 +13,21 @@ class Track {
     var url: URL
     var name: String
     var identifier: String
+    var popularity: Double
     
-    init(name: String, url: URL, identifier: String) {
+    init(name: String, url: URL, identifier: String, popularity: Double) {
         self.name = name
         self.url = url
         self.identifier = identifier
+        self.popularity = popularity
     }
     
     func toParameters() -> Parameters {
         return [
             "name": name,
             "url": url.absoluteString,
-            "identifier": identifier
+            "identifier": identifier,
+            "popularity": popularity
         ]
     }
 }

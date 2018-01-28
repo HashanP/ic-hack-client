@@ -134,11 +134,11 @@
             </objects>
             <point key="canvasLocation" x="772" y="763"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="sfb-IO-3wE">
             <objects>
                 <navigationController id="O7F-UT-E4f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tr7-wd-3qh"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="tr7-wd-3qh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NAC-Sv-Ibo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -220,11 +220,11 @@
             </objects>
             <point key="canvasLocation" x="3556" y="-170.46476761619192"/>
         </scene>
-        <!--Item-->
+        <!--Groups-->
         <scene sceneID="6e6-oX-f2I">
             <objects>
                 <navigationController id="BnK-00-uAH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NIJ-Va-Ivg"/>
+                    <tabBarItem key="tabBarItem" title="Groups" id="NIJ-Va-Ivg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ok4-cA-rqL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -237,7 +237,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="-384"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Groups-->
         <scene sceneID="Gxt-8R-3Qj">
             <objects>
                 <tableViewController id="ZRt-XK-xEH" customClass="TableViewController" customModule="Musique" customModuleProvider="target" sceneMemberID="viewController">
@@ -269,7 +269,7 @@
                             <outlet property="delegate" destination="ZRt-XK-xEH" id="nye-C6-e9x"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n1s-ee-RTf">
+                    <navigationItem key="navigationItem" title="Groups" id="n1s-ee-RTf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dKS-xT-K5M">
                             <connections>
                                 <action selector="btnPressed:" destination="ZRt-XK-xEH" id="4d8-Vv-vpc"/>

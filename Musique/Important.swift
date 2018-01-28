@@ -81,7 +81,7 @@ class Important {
                         
                         for i in t3!.items {
                             let i5 = i as! SPTPlaylistTrack
-                            v.append(Track(name: i5.name, url: i5.uri, identifier: i5.identifier))
+                            v.append(Track(name: i5.name, url: i5.uri, identifier: i5.identifier, popularity: i5.popularity))
                         }
                         f(v)
                     } catch {

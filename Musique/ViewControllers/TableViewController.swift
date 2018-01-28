@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var message = ""
-    var dummyList = ["Group 1", "Group 2", "Group 3"]
+    var dummyList: [String] = [] //["Group 1", "Group 2", "Group 3"]
     
     @IBAction func btnPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Which do you want to do?", message: "You can either join a pre-exisitng group or create your own?", preferredStyle: .actionSheet)
@@ -24,7 +24,7 @@ class TableViewController: UITableViewController {
                     print(v)
                     self.performSegue(withIdentifier: "mySegue5", sender: self)
                 }
-            Communicate.createGroup(group: Important.getUsername(), f: f)
+            Communicate.createGroup(username: Important.getUsername(), f: f)
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -37,7 +37,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "LabelCell")
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,6 +45,16 @@ class TableViewController: UITableViewController {
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        func f(data: [String]) {
+            print("hero")
+            dummyList = data
+            self.tableView.reloadData()
+        }
+        
+        Communicate.list(username: Important.getUsername(), f: f)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
