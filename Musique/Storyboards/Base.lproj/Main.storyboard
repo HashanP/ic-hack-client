@@ -35,11 +35,12 @@
                     </view>
                     <connections>
                         <segue destination="7DX-EV-LtZ" kind="presentation" identifier="mySegue" id="t4j-Hw-EpF"/>
+                        <segue destination="zlF-Vx-teg" kind="presentation" identifier="mySegue2" id="YYq-AW-h0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-2" y="34"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Eu9-7b-zze">
@@ -69,6 +70,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKi-2f-hhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2609" y="438"/>
+        </scene>
+        <!--Playlist Selection View Controller-->
+        <scene sceneID="6b8-Wl-iB4">
+            <objects>
+                <tableViewController id="zlF-Vx-teg" customClass="PlaylistSelectionViewController" customModule="Musique" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HMQ-Ja-xnS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YYc-iJ-iS2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YYc-iJ-iS2" id="Kps-uQ-CqR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAi-du-ZKt" customClass="LabelName">
+                                            <rect key="frame" x="166" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zlF-Vx-teg" id="3Qk-nd-k4h"/>
+                            <outlet property="delegate" destination="zlF-Vx-teg" id="eee-Py-YRT"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPC-zP-VUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="1139"/>
         </scene>
         <!--Item-->
         <scene sceneID="sfb-IO-3wE">

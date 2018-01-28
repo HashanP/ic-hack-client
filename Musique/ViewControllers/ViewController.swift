@@ -52,8 +52,22 @@ class ViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAu
             let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
             self.session = firstTimeSession
             //initializePlayer(authSession: session)
-            performSegue(withIdentifier: "mySegue", sender: self)
-            func t(z: [Playlist]) {
+            print("It works3!")
+
+            func z (b : Bool) {
+                if b {
+                    print("It works2!")
+                    performSegue(withIdentifier: "mySegue", sender: self)
+                } else {
+                    print("It works!")
+                    performSegue(withIdentifier: "mySegue2", sender: self)
+                }
+            }
+            
+            Communicate.isLoggedIn(username: Important.getUsername(), f: z)
+            
+            
+        /*     func t(z: [Playlist]) {
                 for v in z {
                     func w(z2: [String]) {
                         
@@ -61,11 +75,11 @@ class ViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAu
                     Important.getPlaylist(k: v.url, f: w)
                     print(z)
                 }
-             
             }
+            
             Important.getPlaylistNames(f: t)
         }
-    }
+    } */
     
     func initializePlayer(authSession:SPTSession){
         if self.player == nil {
@@ -97,4 +111,6 @@ class ViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAu
     }
     */
 
+}
+}
 }

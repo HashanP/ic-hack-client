@@ -16,6 +16,7 @@
 		230B31C1201D4196005E52AF /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230B31C0201D4195005E52AF /* ObjectMapper.framework */; };
 		230B31C4201D61F1005E52AF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230B31C3201D61F1005E52AF /* TableViewController.swift */; };
 		230B31C8201D86CE005E52AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230B31C7201D86CE005E52AF /* ViewController.swift */; };
+		230B31CA201DA353005E52AF /* PlaylistSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230B31C9201DA353005E52AF /* PlaylistSelectionViewController.swift */; };
 		23E3E150201CB51C00D1CB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3E14F201CB51C00D1CB86 /* AppDelegate.swift */; };
 		23E3E155201CB51C00D1CB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E3E153201CB51C00D1CB86 /* Main.storyboard */; };
 		23E3E157201CB51C00D1CB86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E3E156201CB51C00D1CB86 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		230B31C0201D4195005E52AF /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		230B31C3201D61F1005E52AF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		230B31C7201D86CE005E52AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		230B31C9201DA353005E52AF /* PlaylistSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSelectionViewController.swift; sourceTree = "<group>"; };
 		23E3E14C201CB51C00D1CB86 /* Musique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musique.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E3E14F201CB51C00D1CB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E3E154201CB51C00D1CB86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				23E3E287201CE5F600D1CB86 /* LoggedInViewController2.swift */,
 				23E3E289201CEDB100D1CB86 /* JoinViewController.swift */,
 				230B31C3201D61F1005E52AF /* TableViewController.swift */,
+				230B31C9201DA353005E52AF /* PlaylistSelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				23E3E28A201CEDB100D1CB86 /* JoinViewController.swift in Sources */,
 				23E3E150201CB51C00D1CB86 /* AppDelegate.swift in Sources */,
 				15A58F4B201D9202000F609F /* Important.swift in Sources */,
+				230B31CA201DA353005E52AF /* PlaylistSelectionViewController.swift in Sources */,
 				23E3E24A201CDCB400D1CB86 /* LoggedInViewController.swift in Sources */,
 				15A58F4D201D9B57000F609F /* Playlist.swift in Sources */,
 				230B31C4201D61F1005E52AF /* TableViewController.swift in Sources */,

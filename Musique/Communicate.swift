@@ -17,9 +17,10 @@ class Communicate {
         let tv = ["id": username]
         Alamofire.request(SERVER + "/check", method: .post, parameters: tv, encoding: JSONEncoding.default).responseObject { (response: DataResponse<CheckResponse>) in
             print("bonjour")
-            //print(response.data.)
+            print(response)
             let k = response.result.value?.response
             if let k2 = k {
+                print("bonjour2")
                 f(k2)
              }
         }
