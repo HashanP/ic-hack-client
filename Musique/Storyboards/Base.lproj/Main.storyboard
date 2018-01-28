@@ -154,7 +154,7 @@
         <!--Join-->
         <scene sceneID="5K0-J8-Ord">
             <objects>
-                <viewController id="pzc-jg-iep" sceneMemberID="viewController">
+                <viewController id="pzc-jg-iep" customClass="JoinViewController" customModule="Musique" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mnt-fv-aY2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,19 +165,30 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="GroupName:" destination="GVR-ak-sAI" eventType="editingDidEnd" id="AAY-gM-hsK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfu-oO-WkW">
                                 <rect key="frame" x="164" y="384" width="46" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Join"/>
+                                <connections>
+                                    <action selector="ConfirmBtn:" destination="GVR-ak-sAI" eventType="touchDown" id="f54-ye-ldf"/>
+                                    <action selector="ConfirmBtn:" destination="pzc-jg-iep" eventType="touchDown" id="xbK-wr-QPt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="v7i-US-Gw2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Join" id="lDg-Eg-vkx"/>
+                    <connections>
+                        <outlet property="GroupName" destination="TLt-wY-qOx" id="oZM-Ud-TjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acm-5v-ZUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GVR-ak-sAI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3556" y="-831"/>
         </scene>
@@ -282,6 +293,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LIi-h7-4zk"/>
+        <segue reference="t4j-Hw-EpF"/>
     </inferredMetricsTieBreakers>
 </document>

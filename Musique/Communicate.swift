@@ -52,8 +52,8 @@ class Communicate {
     
     static func joinGroup(username: String, group: String,  f: @escaping ((Bool) -> ())) {
         let tv: Parameters = [
-            username: username,
-            group: group
+            "username": username,
+            "group": group
         ]
         Alamofire.request(SERVER + "/join", method: .post, parameters: tv, encoding: JSONEncoding.default).responseObject { (response: DataResponse<CheckResponse>) in
             print("bonjour")
