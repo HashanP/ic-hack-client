@@ -9,7 +9,7 @@
 import Foundation
 
 class Important {
-    static func getPlaylistNames(f: @escaping (([URL]) -> ())) -> () {
+    static func getPlaylistNames(f: @escaping (([Playlist]) -> ())) -> () {
         let userDefaults = UserDefaults.standard
         if let sessionObj:AnyObject = userDefaults.object(forKey: "SpotifySession") as AnyObject? {
             let sessionDataObj = sessionObj as! Data
@@ -20,14 +20,14 @@ class Important {
                 let k = try SPTPlaylistList.createRequestForGettingPlaylists(forUser: user, withAccessToken: accessToken)
                 let handler = SPTRequest.sharedHandler()
                 func f2(error: Optional<Error>, resp: Optional<URLResponse>, data: Optional<Data>) {
-                    var v: [URL] = []
+                    var v: [Playlist] = []
                     do {
                         let t = try SPTPlaylistList.init(from: data, with: resp)
                         for i in t.items {
                             let i2 = i as! SPTPartialPlaylist
                             print(i2.name)
                             if (i2.playableUri != nil) {
-                                v.append(i2.playableUri!)
+                                v.append(Playlist(name: i2.name, url: i2.playableUri!))
                             }
                         }
                         f(v)

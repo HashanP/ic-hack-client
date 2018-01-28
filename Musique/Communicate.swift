@@ -23,13 +23,5 @@ class Communicate {
                 f(k2)
              }
         }
-        /*Alamofire.request(SERVER + "", method: .post, parameters: tv, encoding: JSONEncoding.default).response { response in
-            print("bonjour")
-            print(String(data: response.data!, encoding:.utf8))
-            /*let k = response.result.value?.response
-             if let k2 = k {
-             f(k2)
-             }*/
-        }*/
     }
 }

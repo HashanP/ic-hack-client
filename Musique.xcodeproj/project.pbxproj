@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15A58F4B201D9202000F609F /* Important.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A58F4A201D9202000F609F /* Important.swift */; };
+		15A58F4D201D9B57000F609F /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A58F4C201D9B57000F609F /* Playlist.swift */; };
 		230B2E15201D406D005E52AF /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E3E23F201CC64100D1CB86 /* SpotifyAudioPlayback.framework */; };
 		230B2E16201D406D005E52AF /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E3E240201CC64200D1CB86 /* SpotifyAuthentication.framework */; };
 		230B2E17201D406D005E52AF /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E3E23E201CC64000D1CB86 /* SpotifyMetadata.framework */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		15A58F4A201D9202000F609F /* Important.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Important.swift; sourceTree = "<group>"; };
+		15A58F4C201D9B57000F609F /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		230B31BE201D40E9005E52AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		230B31C0201D4195005E52AF /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		230B31C3201D61F1005E52AF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		23E3E14E201CB51C00D1CB86 /* Musique */ = {
 			isa = PBXGroup;
 			children = (
+				15A58F4C201D9B57000F609F /* Playlist.swift */,
 				23E3E184201CBF3400D1CB86 /* Musique-Bridging-Header.h */,
 				15A58F49201D91E2000F609F /* ServerResponses */,
 				15A58F48201D91CE000F609F /* Other */,
@@ -388,6 +391,7 @@
 				23E3E150201CB51C00D1CB86 /* AppDelegate.swift in Sources */,
 				15A58F4B201D9202000F609F /* Important.swift in Sources */,
 				23E3E24A201CDCB400D1CB86 /* LoggedInViewController.swift in Sources */,
+				15A58F4D201D9B57000F609F /* Playlist.swift in Sources */,
 				230B31C4201D61F1005E52AF /* TableViewController.swift in Sources */,
 				23E3E288201CE5F600D1CB86 /* LoggedInViewController2.swift in Sources */,
 			);

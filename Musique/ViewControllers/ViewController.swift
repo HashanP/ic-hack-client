@@ -53,12 +53,12 @@ class ViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, SPTAu
             self.session = firstTimeSession
             //initializePlayer(authSession: session)
             performSegue(withIdentifier: "mySegue", sender: self)
-            func t(z: [URL]) {
+            func t(z: [Playlist]) {
                 for v in z {
                     func w(z2: [String]) {
                         
                     }
-                    Important.getPlaylist(k: v, f: w)
+                    Important.getPlaylist(k: v.url, f: w)
                     print(z)
                 }
              
