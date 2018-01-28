@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "Join"; ObjectID = "1iM-6p-eq3"; */
+"1iM-6p-eq3.normalTitle" = "Join";
+
+/* Class = "UILabel"; text = "User Information"; ObjectID = "558-ti-ZP8"; */
+"558-ti-ZP8.text" = "User Information";
+
+/* Class = "UIButton"; normalTitle = "Login with Spotify"; ObjectID = "GzF-lp-HeD"; */
+"GzF-lp-HeD.normalTitle" = "Login with Spotify";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "PgT-iy-6Nl"; */
+"PgT-iy-6Nl.normalTitle" = "Logout";
+
+/* Class = "UINavigationItem"; title = "Group Name"; ObjectID = "RjA-Al-xlR"; */
+"RjA-Al-xlR.title" = "Group Name";
+
+/* Class = "UIBarButtonItem"; title = "+"; ObjectID = "Xfg-Pn-Rww"; */
+"Xfg-Pn-Rww.title" = "+";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "ZhA-Cz-B9a"; */
+"ZhA-Cz-B9a.title" = "Item 1";
+
+/* Class = "UINavigationItem"; title = "Join group"; ObjectID = "fAT-Gy-b70"; */
+"fAT-Gy-b70.title" = "Join group";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "fwC-dU-kQy"; */
+"fwC-dU-kQy.title" = "Item 2";
+
+/* Class = "UITextField"; placeholder = "Code"; ObjectID = "gaz-PT-dqs"; */
+"gaz-PT-dqs.placeholder" = "Code";
